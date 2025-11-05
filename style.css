@@ -1,0 +1,168 @@
+:root {
+  --green: #2e7d32;
+  --light-green: #a5d6a7;
+  --bg: #f9fff9;
+  --text: #333;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background: #1b1b1b;
+  color: #f2f2f2;
+}
+
+.dark-mode .hero {
+  background: #333;
+}
+
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: var(--green);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Loader */
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ddd;
+  border-top: 5px solid var(--green);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Hero */
+.hero {
+  padding: 80px 20px;
+  background: var(--green);
+  color: white;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Countdown */
+.countdown-section {
+  margin: 40px auto;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#countdown div {
+  background: var(--light-green);
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+#countdown span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Info Section */
+.info {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 15px;
+  line-height: 1.6;
+}
+
+/* Form */
+.newsletter {
+  margin: 40px auto;
+}
+
+form {
+  margin-top: 15px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--green);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  background: var(--green);
+  color: white;
+  padding: 15px;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #countdown {
+    flex-direction: column;
+  }
+}
