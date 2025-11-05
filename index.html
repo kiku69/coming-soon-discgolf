@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discgolf Challenge App – Coming Soon</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
 
-    </header>
-    <footer>
-        
-    </footer>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Dark mode toggle -->
+  <button id="darkModeToggle" class="dark-toggle">🌙</button>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="images/logo.png" alt="Discgolf Logo" class="logo">
+    <h1 class="fade-in">Discgolf Challenge App</h1>
+    <p class="subtitle">Uus viis muuta discgolf lõbusamaks – tulekul peagi!</p>
+  </header>
+
+  <!-- Countdown Section -->
+  <section class="countdown-section">
+    <h2>🚀 Tulekul:</h2>
+    <div id="countdown">
+      <div><span id="days">00</span><p>Päeva</p></div>
+      <div><span id="hours">00</span><p>Tundi</p></div>
+      <div><span id="minutes">00</span><p>Minutit</p></div>
+      <div><span id="seconds">00</span><p>Sekundit</p></div>
+    </div>
+  </section>
+
+  <!-- Projekti ülevaade -->
+  <section class="info">
+    <h2>💡 Projekti ülevaade</h2>
+    <p>
+      <strong>Discgolf Challenge App</strong> on mobiilirakendus, mis muudab discgolfi mängu põnevamaks.
+      Mängijad saavad väljakutseid anda üksteisele – näiteks “vise vasaku käega” või “pime putt”.
+      Eesmärk on lisada mängu nalja, põnevust ja vaheldust, et iga rada oleks unikaalne kogemus.
+    </p>
+  </section>
+
+  <!-- Email vorm -->
+  <section class="newsletter">
+    <h2>📧 Liitu uudiskirjaga</h2>
+    <p>Soovid teada, kui äpp valmis saab? Jäta oma e-mail:</p>
+    <form id="emailForm">
+      <input type="email" id="email" placeholder="Sisesta oma e-mail..." required>
+      <button type="submit">Saada</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <!-- Jalus -->
+  <footer>
+    <p>© 2025 Kristofer Mere | Kuressaare Ametikool | Tarkvaraarenduse lõputöö</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
