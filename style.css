@@ -1,140 +1,160 @@
 :root {
-  --green: #2e7d32;
-  --light-green: #a5d6a7;
-  --bg: #f9fff9;
-  --text: #333;
+  --accent: #383;
+  --dark:   #333;
+  --mid:    #ddd;
 }
 
+
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
+  margin:  0;
   padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  text-align: center;
+  
+  background: white;
+
+  font-family: 'Poppins', sans-serif;
+  color:       var(--dark);
+  text-align:  center;
+
   transition: background 0.3s, color 0.3s;
 }
 
+
+
 .dark-mode {
-  background: #1b1b1b;
-  color: #f2f2f2;
+  background: var(--dark);
+  color:      white;
 }
 
 .dark-toggle {
+  position: fixed;
+  inset:    20px 20px auto auto;
+  width:    50px;
+  height:   50px;
+  
   display: flex;
-  align-items: center;
+  align-items:     center;
   justify-content: center;
   
-  position: fixed;
-  inset: 20px 20px auto auto;
-  width: 50px;
-  height: 50px;
-  
+  box-shadow: 0 2px 5px #0005;
+
   border: none;
-  background: var(--green);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  background: var(--accent);
   
   font-size: 1.2rem;
-  border-radius: 50%;
   
   cursor: pointer;
 }
 
-.dark-toggle:after {
-  content: "🌙";
-}
+           .dark-toggle:after {content: "🌙"}
+.dark-mode .dark-toggle:after {content: "☀️"}
 
-.dark-mode .dark-toggle:after {
-  content: "☀️";
-}
 
-/* Loader */
+
 #loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 100;
+
+  position: fixed;
+  width:  100%;
+  height: 100%;
+  
+  display: flex;
+  align-items:     center;
+  justify-content: center;
+
+  background: white;
 }
 
 .spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #ddd;
-  border-top: 5px solid var(--green);
+  border:        5px solid var(--mid);
+  border-top:    5px solid var(--accent);
   border-radius: 50%;
+
+  width:  50px;
+  height: 50px;
+
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  100% { transform: rotate(360deg); }
+  100% {transform: rotate(360deg)}
 }
+
+
 
 .header {
   padding: 20px 20px;
-  background: var(--green);
+
+  background: var(--accent);
+
   color: white;
 }
 
 .logo {
-  width: 120px;
   margin-bottom: 10px;
+
+  width: 120px;
 }
 
 .subtitle {
-  font-size: 1.1rem;
   margin-top: 10px;
+
+  font-size: 1.1rem;
 }
 
-/* Countdown */
+
+
 .countdown-section {
   margin: 40px auto;
 }
 
 #countdown {
+  gap: 20px;
+
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 #countdown div {
+  padding: 15px 25px;
+
   display: flex;
-  flex-direction: column;
+  flex-direction:  column;
   justify-content: center;
   
-  background: var(--light-green);
-  padding: 15px 25px;
   border-radius: 10px;
+  background:    #ada;
 }
 
 .dark-mode #countdown div {
-  background: var(--green);
+  background: var(--accent);
 }
 
 #countdown span {
   margin: 10px;
-  font-size: 2em;
+
+  font-size:   2em;
   font-weight: bold;
 }
 
 #countdown p {
   margin: 10px;
+
   vertical-align: middle;
-  line-height: 2.25em;
+  line-height:    2.25em;
 }
 
-/* Info Section */
+
+
 .info {
-  max-width: 800px;
   margin: 40px auto;
-  padding: 0 15px;
+
+  max-width: 800px;
+
   line-height: 2;
 }
 
-/* Form */
 .newsletter {
   margin: 40px auto;
 }
@@ -144,19 +164,22 @@ form {
 }
 
 input[type="email"] {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid var(--green);
+  border: 1px solid var(--accent);
   border-radius: 5px;
+  padding: 10px;
+  
+  width: 250px;
 }
 
 button {
-  padding: 10px 20px;
   border: none;
-  background: var(--green);
-  color: white;
-  font-weight: bold;
   border-radius: 5px;
+  padding: 10px 20px;
+
+  background:  var(--accent);
+  color:       white;
+  font-weight: bold;
+
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -165,17 +188,21 @@ button:hover {
   background: #1b5e20;
 }
 
-/* Footer */
+
+
 footer {
   margin-top: 50px;
-  background: var(--green);
-  color: white;
   padding: 15px;
+
+  background: var(--accent);
+
+  color: white;
 }
 
-/* Fade-in animation */
+
+
 .fade-in {
-  opacity: 0;
+  opacity:   0;
   animation: fadeIn 1.5s forwards;
 }
 
@@ -183,13 +210,7 @@ footer {
   100% { opacity: 1; }
 }
 
-/* Responsive */
 @media (max-width: 600px) {
-  #countdown {
-    flex-direction: column;
-  }
-
-  #countdown div {
-    flex-direction: row;
-  }
+  #countdown     {flex-direction: column}
+  #countdown div {flex-direction: row}
 }
