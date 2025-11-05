@@ -1,2 +1,2 @@
 # Esimene päev
-jou
+Tegime githubi repo, alustasime figma disainiga ja slacki grupi.
