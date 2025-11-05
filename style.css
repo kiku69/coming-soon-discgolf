@@ -20,23 +20,32 @@ body {
   color: #f2f2f2;
 }
 
-.dark-mode .hero {
-  background: #333;
-}
-
 .dark-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   position: fixed;
-  top: 20px;
-  right: 20px;
+  inset: 20px 20px auto auto;
+  width: 50px;
+  height: 50px;
+  
   border: none;
   background: var(--green);
-  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  
   font-size: 1.2rem;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.dark-toggle:after {
+  content: "🌙";
+}
+
+.dark-mode .dark-toggle:after {
+  content: "☀️";
 }
 
 /* Loader */
@@ -99,6 +108,10 @@ body {
   background: var(--light-green);
   padding: 15px 25px;
   border-radius: 10px;
+}
+
+.dark-mode #countdown div {
+  background: var(--green);
 }
 
 #countdown span {
