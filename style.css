@@ -1,7 +1,9 @@
 :root {
   --accent: #383;
+  --hover:  #252;
   --dark:   #333;
   --mid:    #ddd;
+  --light:  #fff;
 }
 
 
@@ -9,7 +11,7 @@
 body {
   margin:  0;
   padding: 0;
-  
+
   background: white;
 
   font-family: 'Poppins', sans-serif;
@@ -28,22 +30,22 @@ body {
 
 .dark-toggle {
   position: fixed;
-  inset:    20px 20px auto auto;
-  width:    50px;
-  height:   50px;
-  
+  inset:    2rem 2rem auto auto;
+  width:    3rem;
+  height:   3rem;
+
   display: flex;
   align-items:     center;
   justify-content: center;
-  
-  box-shadow: 0 2px 5px #0005;
+
+  box-shadow: 0px 2px 5px #0005;
 
   border: none;
   border-radius: 50%;
   background: var(--accent);
-  
+
   font-size: 1.2rem;
-  
+
   cursor: pointer;
 }
 
@@ -58,7 +60,7 @@ body {
   position: fixed;
   width:  100%;
   height: 100%;
-  
+
   display: flex;
   align-items:     center;
   justify-content: center;
@@ -67,24 +69,22 @@ body {
 }
 
 .spinner {
-  border:        5px solid var(--mid);
-  border-top:    5px solid var(--accent);
+  border:        .5rem solid var(--mid);
+  border-top:    .5rem solid var(--accent);
   border-radius: 50%;
 
-  width:  50px;
-  height: 50px;
+  width:  3rem;
+  height: 3rem;
 
   animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-  100% {transform: rotate(360deg)}
-}
+@keyframes spin {100% {transform: rotate(360deg)}}
 
 
 
 .header {
-  padding: 20px 20px;
+  padding: 1.5rem;
 
   background: var(--accent);
 
@@ -92,13 +92,13 @@ body {
 }
 
 .logo {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 
   width: 120px;
 }
 
 .subtitle {
-  margin-top: 10px;
+  margin-top: 1rem;
 
   font-size: 1.1rem;
 }
@@ -106,24 +106,24 @@ body {
 
 
 .countdown-section {
-  margin: 40px auto;
+  margin: 2rem auto;
 }
 
 #countdown {
-  gap: 20px;
+  gap: 1.5rem;
 
   display: flex;
   justify-content: center;
 }
 
 #countdown div {
-  padding: 15px 25px;
+  padding: 1rem 2rem;
 
   display: flex;
   flex-direction:  column;
   justify-content: center;
-  
-  border-radius: 10px;
+
+  border-radius: 1rem;
   background:    #ada;
 }
 
@@ -132,14 +132,14 @@ body {
 }
 
 #countdown span {
-  margin: 10px;
+  margin: 1rem;
 
-  font-size:   2em;
+  font-size:   2rem;
   font-weight: bold;
 }
 
 #countdown p {
-  margin: 10px;
+  margin: 1rem;
 
   vertical-align: middle;
   line-height:    2.25em;
@@ -148,7 +148,7 @@ body {
 
 
 .info {
-  margin: 40px auto;
+  margin: 3rem auto;
 
   max-width: 800px;
 
@@ -156,25 +156,25 @@ body {
 }
 
 .newsletter {
-  margin: 40px auto;
+  margin: 2rem auto;
 }
 
 form {
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 input[type="email"] {
   border: 1px solid var(--accent);
-  border-radius: 5px;
-  padding: 10px;
-  
+  border-radius: .5rem;
+  padding: .75rem;
+
   width: 250px;
 }
 
 button {
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+  border-radius: .5rem;
+  padding: .75rem 1.5rem;
 
   background:  var(--accent);
   color:       white;
@@ -184,15 +184,13 @@ button {
   transition: background 0.3s;
 }
 
-button:hover {
-  background: #1b5e20;
-}
+button:hover {background: var(--hover)}
 
 
 
 footer {
-  margin-top: 50px;
-  padding: 15px;
+  margin-top: 4rem;
+  padding: 1rem;
 
   background: var(--accent);
 
@@ -206,11 +204,11 @@ footer {
   animation: fadeIn 1.5s forwards;
 }
 
-@keyframes fadeIn {
-  100% { opacity: 1; }
-}
+@keyframes fadeIn {100% {opacity: 1}}
 
-@media (max-width: 600px) {
+
+
+@media (max-width: 800px) {
   #countdown     {flex-direction: column}
   #countdown div {flex-direction: row}
 }
