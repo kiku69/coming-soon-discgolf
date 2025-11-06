@@ -1,168 +1,214 @@
 :root {
-  --green: #2e7d32;
-  --light-green: #a5d6a7;
-  --bg: #f9fff9;
-  --text: #333;
+  --accent: #383;
+  --hover:  #252;
+  --dark:   #333;
+  --mid:    #ddd;
+  --light:  #fff;
 }
 
+
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
+  margin:  0;
   padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  text-align: center;
+
+  background: white;
+
+  font-family: 'Poppins', sans-serif;
+  color:       var(--dark);
+  text-align:  center;
+
   transition: background 0.3s, color 0.3s;
 }
 
-.dark-mode {
-  background: #1b1b1b;
-  color: #f2f2f2;
-}
 
-.dark-mode .hero {
-  background: #333;
+
+.dark-mode {
+  background: var(--dark);
+  color:      white;
 }
 
 .dark-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  inset:    2rem 2rem auto auto;
+  width:    3rem;
+  height:   3rem;
+
+  display: flex;
+  align-items:     center;
+  justify-content: center;
+
+  box-shadow: 0px 2px 5px #0005;
+
   border: none;
-  background: var(--green);
-  color: white;
-  font-size: 1.2rem;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  background: var(--accent);
+
+  font-size: 1.2rem;
+
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Loader */
+           .dark-toggle:after {content: "🌙"}
+.dark-mode .dark-toggle:after {content: "☀️"}
+
+
+
 #loader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 100;
+
+  position: fixed;
+  width:  100%;
+  height: 100%;
+
+  display: flex;
+  align-items:     center;
+  justify-content: center;
+
+  background: white;
 }
 
 .spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #ddd;
-  border-top: 5px solid var(--green);
+  border:        .5rem solid var(--mid);
+  border-top:    .5rem solid var(--accent);
   border-radius: 50%;
+
+  width:  3rem;
+  height: 3rem;
+
   animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-  100% { transform: rotate(360deg); }
-}
+@keyframes spin {100% {transform: rotate(360deg)}}
 
-/* Hero */
-.hero {
-  padding: 80px 20px;
-  background: var(--green);
+
+
+.header {
+  padding: 1.5rem;
+
+  background: var(--accent);
+
   color: white;
 }
 
 .logo {
+  margin-bottom: 1rem;
+
   width: 120px;
-  margin-bottom: 10px;
 }
 
 .subtitle {
+  margin-top: 1rem;
+
   font-size: 1.1rem;
-  margin-top: 10px;
 }
 
-/* Countdown */
+
+
 .countdown-section {
-  margin: 40px auto;
+  margin: 2rem auto;
 }
 
 #countdown {
+  gap: 1.5rem;
+
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 #countdown div {
-  background: var(--light-green);
-  padding: 15px 25px;
-  border-radius: 10px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction:  column;
+  justify-content: center;
+
+  border-radius: 1rem;
+  background:    #ada;
+}
+
+.dark-mode #countdown div {
+  background: var(--accent);
 }
 
 #countdown span {
-  font-size: 2rem;
+  margin: 1rem;
+
+  font-size:   2rem;
   font-weight: bold;
 }
 
-/* Info Section */
-.info {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 0 15px;
-  line-height: 1.6;
+#countdown p {
+  margin: 1rem;
+
+  vertical-align: middle;
+  line-height:    2.25em;
 }
 
-/* Form */
+
+
+.info {
+  margin: 3rem auto;
+
+  max-width: 800px;
+
+  line-height: 2;
+}
+
 .newsletter {
-  margin: 40px auto;
+  margin: 2rem auto;
 }
 
 form {
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 input[type="email"] {
-  padding: 10px;
+  border: 1px solid var(--accent);
+  border-radius: .5rem;
+  padding: .75rem;
+
   width: 250px;
-  border: 1px solid var(--green);
-  border-radius: 5px;
 }
 
 button {
-  padding: 10px 20px;
   border: none;
-  background: var(--green);
-  color: white;
+  border-radius: .5rem;
+  padding: .75rem 1.5rem;
+
+  background:  var(--accent);
+  color:       white;
   font-weight: bold;
-  border-radius: 5px;
+
   cursor: pointer;
   transition: background 0.3s;
 }
 
-button:hover {
-  background: #1b5e20;
-}
+button:hover {background: var(--hover)}
 
-/* Footer */
+
+
 footer {
-  margin-top: 50px;
-  background: var(--green);
+  margin-top: 4rem;
+  padding: 1rem;
+
+  background: var(--accent);
+
   color: white;
-  padding: 15px;
 }
 
-/* Fade-in animation */
+
+
 .fade-in {
-  opacity: 0;
+  opacity:   0;
   animation: fadeIn 1.5s forwards;
 }
 
-@keyframes fadeIn {
-  100% { opacity: 1; }
-}
+@keyframes fadeIn {100% {opacity: 1}}
 
-/* Responsive */
-@media (max-width: 600px) {
-  #countdown {
-    flex-direction: column;
-  }
+
+
+@media (max-width: 800px) {
+  #countdown     {flex-direction: column}
+  #countdown div {flex-direction: row}
 }
