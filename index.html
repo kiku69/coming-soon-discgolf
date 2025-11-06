@@ -4,53 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Discgolf Challenge App – Peagi Tulekul!</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div    id="loader"><div    class="spinner"></div></div>
   <button id="darkModeToggle" class="dark-toggle"></button>
 
-  <header class="header">
-    <img src="images/logo.png" alt="Discgolf Logo" class="logo fade-in">
-    <h1 class="fade-in">Discgolf Challenge App</h1>
-    <p class="subtitle fade-in">Uus viis muuta discgolf lõbusamaks – peagi tulekul!</p>
+  <header>
+    <a href="index.html">
+      <img src="images/logo.png" alt="Discgolf Logo" class="logo fade-in">
+    </a>
+    <div>
+      <h1 class="fade-in">Discgolf Challenge App</h1>
+      <p class="subtitle fade-in">Uus viis muuta discgolf lõbusamaks – peagi tulekul!</p>
+    </div>
   </header>
 
-  <!-- Countdown Section -->
-  <section class="countdown-section">
-    <h2>Aeg avaldamiseni:</h2>
-    <div id="countdown">
-      <div><span id="days"   >00</span><p>Päeva</p></div>
-      <div><span id="hours"  >00</span><p>Tundi</p></div>
-      <div><span id="minutes">00</span><p>Minutit</p></div>
-      <div><span id="seconds">00</span><p>Sekundit</p></div>
-    </div>
-  </section>
+  <main>
+    <section class="countdown-section">
+      <h2>Aeg avaldamiseni:</h2>
+      <div id="countdown">
+        <div><span id="days"   >00</span><p>Päeva</p></div>
+        <div><span id="hours"  >00</span><p>Tundi</p></div>
+        <div><span id="minutes">00</span><p>Minutit</p></div>
+        <div><span id="seconds">00</span><p>Sekundit</p></div>
+      </div>
+    </section>
+  
+    <section class="info">
+      <h2>Projekti ülevaade</h2>
+      <p>
+        Discgolf on populaarne ja lihtsasti kättesaadav spordiala, <br>
+        kuid selle mängimine võib aja jooksul muutuda üksluiseks. <br>
+        Tihti mängitakse samu radu, samade reeglitega,
+        ning puudub lisamotivatsioon või vaheldus. <br>
+        Mängu sotsiaalne pool on küll oluline, kuid selle kõrval võiks olla midagi, <br>
+        mis muudab iga mängu unikaalseks ja põnevaks.
+      </p>
+      <p>
+        Selle mure lahenduseks on <strong>Discgolf Challenge App</strong>,
+        mis toob mängu lõbusa juhuslikkuse ja strateegilise mõtlemise.
+        Rakendus annab mängijatele väljakutseid, nagu:
+        <!-- TODO: replace list with rendered cards-->
+        <ul>
+          <li>Tee järgmine vise vasaku käega;</li>
+          <li>Putt silmad kinni;</li>
+          <li>Vali ketas, mida sa pole varem kasutanud;</li>
+          <li>Püsi enne viset 10 sekundit ühel jalal seistes.</li>
+        </ul>
+      </p>
+      <p>
+        Need ülesanded, ning seotud edetabel(id) muudavad iga mängu eriliseks, <br>
+        ning loovad mängijate vahel rohkem suhtlust ja nalja.
+      </p>
+    </section>
+  
+    <section class="newsletter">
+      <h2>Liitu uudiskirjaga</h2>
+      <p>Soovid teada, kui äpp valmis saab?</p>
+      <form id="emailForm">
+        <input type="email" id="email" placeholder="Sisesta oma email" required>
+        <button type="submit">Saada</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+  </main>
 
-  <!-- Projekti ülevaade -->
-  <section class="info">
-    <h2>Projekti ülevaade</h2>
-    <p>
-      <strong>Discgolf Challenge App</strong> on mobiilirakendus, mis muudab discgolfi mängu põnevamaks. <br>
-      Mängijad saavad väljakutseid anda üksteisele, nagu “vise vasaku käega” või “pime putt”. <br>
-      Eesmärk on lisada mängu nalja, põnevust ja vaheldust, et iga rada oleks unikaalne kogemus.
-    </p>
-  </section>
-
-  <!-- Email vorm -->
-  <section class="newsletter">
-    <h2>Liitu uudiskirjaga</h2>
-    <p>Soovid teada, kui äpp valmis saab?</p>
-    <form id="emailForm">
-      <input type="email" id="email" placeholder="Sisesta oma email" required>
-      <button type="submit">Saada</button>
-    </form>
-    <p id="formMessage"></p>
-  </section>
-
-  <!-- Jalus -->
   <footer>
-    <p>© 2025 Kristofer Mere | Kuressaare Ametikool | Tarkvaraarenduse lõputöö</p>
+    <p>© 2025 Kristofer Mere</`p>
+    <p>Kuressaare Ametikool</p>
+    <p>Tarkvaraarenduse lõputöö</p>
   </footer>
 
   <script src="script.js"></script>
