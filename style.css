@@ -32,7 +32,7 @@ body {
   color:      white;
 }
 
-.dark-toggle {
+.button.dark-toggle {
   position: fixed;
   inset:    2rem 2rem auto auto;
   width:    3rem;
@@ -209,7 +209,7 @@ input[type="email"] {
   width: 250px;
 }
 
-button {
+.button {
   border: none;
   border-radius: .5rem;
   padding: .75rem 1.5rem;
@@ -217,12 +217,15 @@ button {
   background:  var(--accent);
   color:       white;
   font-weight: bold;
+  
+  font-weight:     normal;
+  text-decoration: none;
 
   cursor: pointer;
   transition: background 0.3s;
 }
 
-button:hover {background: var(--hover)}
+.button:hover {background: var(--hover)}
 
 
 
