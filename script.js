@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
 });
 
 // Countdown timer
-const endDate = new Date("2026-12-31T00:00:00").getTime();
+const endDate = new Date("2026-05-15T00:00:00").getTime();
 
 function countDown() {
   const dist = (endDate - new Date().getTime()) / 1000;
@@ -17,16 +17,21 @@ function countDown() {
   });
 };
 
-countDown(); setInterval(countDown, 1000);
+if (document.getElementById("days") != null) {
+  countDown(); setInterval(countDown, 1000);
+}
+
 
 // Email form
-document.getElementById("emailForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  document.getElementById("formMessage").innerText =
-    "Aitäh! Teavitame sind, kui äpp on valmis!";
-  // TODO: send it somewhere
-  this.reset();
-});
+if (document.getElementById("emailform") != null) {
+  document.getElementById("emailForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("formMessage").innerText =
+      "Aitäh! Teavitame sind, kui äpp on valmis!";
+    // TODO: send it somewhere
+    this.reset();
+  });
+}
 
 // Dark mode toggle
 document.getElementById("darkModeToggle").addEventListener("click", () => {
