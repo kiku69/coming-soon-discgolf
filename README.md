@@ -1,4 +1,4 @@
-# Discgolf challange app veebileht
+# Discgolf challenge app veebileht
 
 ## Seletus:
 Infoleht appi jaoks
