@@ -6,9 +6,13 @@
   --light:  #fff;
 }
 
+* {
+  box-sizing: border-box;
+  padding: none;
+}
+
 html,
 body {
-  box-sizing: border-box;
   height: 100%;
 }
 
@@ -203,8 +207,6 @@ main {
 }
 
 .info {
-  box-sizing: border-box;
-
   max-width: 65ch;
 
   line-height: 1.75rem;
