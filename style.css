@@ -6,7 +6,6 @@
   --light:  #fff;
 }
 
-
 html,
 body {
   box-sizing: border-box;
@@ -113,6 +112,7 @@ header {
 .logo {
   width: 120px;
   height: 120px;
+  margin-left: 2rem;
 
   border-radius: 50%;
   background: white;
@@ -197,7 +197,10 @@ main {
   line-height:    2.25em;
 }
 
-
+.header1 {
+  display: flex;
+  justify-content: left;
+}
 
 .info {
   box-sizing: border-box;
@@ -319,6 +322,10 @@ footer p {
   header {
     flex-direction: column;
     gap: 0;
+  }
+
+  .logo {
+    margin-left: 0rem;
   }
 
   footer {
