@@ -116,7 +116,6 @@ header {
 .logo {
   width: 120px;
   height: 120px;
-  margin-left: 2rem;
 
   border-radius: 50%;
   background: white;
@@ -199,11 +198,6 @@ main {
 
   vertical-align: middle;
   line-height:    2.25em;
-}
-
-.header1 {
-  display: flex;
-  justify-content: left;
 }
 
 .info {
@@ -305,7 +299,7 @@ footer p {
 
 .fade-in {
   opacity:   0;
-  animation: fadeIn 1.5s forwards;
+  animation: fadeIn 2.5s forwards;
 }
 
 @keyframes fadeIn {100% {opacity: 1}}
@@ -324,10 +318,6 @@ footer p {
   header {
     flex-direction: column;
     gap: 0;
-  }
-
-  .logo {
-    margin-left: 0rem;
   }
 
   footer {
