@@ -116,6 +116,7 @@ header {
 .logo {
   width: 120px;
   height: 120px;
+  margin-left: 2rem;
 
   border-radius: 50%;
   background: white;
@@ -200,7 +201,10 @@ main {
   line-height:    2.25em;
 }
 
-
+.header1 {
+  display: flex;
+  justify-content: left;
+}
 
 .info {
   max-width: 65ch;
@@ -320,6 +324,10 @@ footer p {
   header {
     flex-direction: column;
     gap: 0;
+  }
+
+  .logo {
+    margin-left: 0rem;
   }
 
   footer {
