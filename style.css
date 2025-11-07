@@ -8,7 +8,7 @@
 
 * {
   box-sizing: border-box;
-  padding: none;
+  padding: 0;
 }
 
 html,
@@ -157,12 +157,17 @@ main {
   transition: background 0.3s, color 0.3s;
 }
 
+.coming-soon {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
 .dark-mode main {
   background: #0008;
 }
 
 .countdown-section {
-  margin: 2rem auto;
+  margin: 0rem auto 2rem;
 }
 
 #countdown {
