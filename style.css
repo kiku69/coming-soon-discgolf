@@ -131,8 +131,6 @@ header {
   height: 100%;
 
   display: flex;
-  align-items:     center;
-  justify-content: center;
 
   background: #0000;
   transition: background 0.3s, color 0.3s;
